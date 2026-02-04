@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken")
 const mongoo = require("../models/app.model")
 
 async function authMiddleware(req,res,next){
-    const {token}=req.cookies.token
+    const {token}=req.cookies
 
      if(!token){
         res.status(401).json({
