@@ -4,7 +4,7 @@ function connectToDb (){
     mongoose.connect(process.env.MONGOO_DB)
     .then(console.log("Connect To MONGO_DB"))
     .catch(err =>{
-        console.log(`SOme Thing is wrong ${err}`)
+        console.log(`Some Thing is wrong ${err}`)
     })
 }
 

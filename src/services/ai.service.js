@@ -14,7 +14,7 @@ async function captionCreation(base64ImageFile) {
                 data: base64ImageFile,
             },
         },
-        { text: "Create indian dark famous meme caption in Hinglish" },
+        { text: "Create funny caption in one line only in Hinglish" },
     ];
 
     const response = await ai.models.generateContent({

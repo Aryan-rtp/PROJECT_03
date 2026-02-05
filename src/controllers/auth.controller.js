@@ -23,14 +23,12 @@ async function register_controller(req,res){
  
      res.status(200).json({
          message:"Account create successfully",
-         user
      })
 }
 async function login_controller(req,res){
 const {username,password}=req.body
 
     const isexit = await mongoo.findOne({username})
-    console.log(isexit)
     if(!isexit){
         return res.status(401).json({
             message:"Not Exist"
@@ -38,7 +36,7 @@ const {username,password}=req.body
     }
 
     const iscorrect = password == isexit.password
-    console.log(iscorrect)
+    
 
      if(!iscorrect){
         return res.status(401).json({
