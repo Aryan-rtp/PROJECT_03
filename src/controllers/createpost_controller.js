@@ -36,8 +36,7 @@ async function mypost(req,res){
         const check = await postmodel.find({user:user})
 
         const captions = check.map((caption,index) => { 
-            return `Caption ${index+1} => ${caption.caption}`
-        });
+            return `Caption ${index+1} => ${caption.caption}`});
         return res.status(200).json({
             cation:captions
         })
