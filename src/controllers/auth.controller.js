@@ -23,6 +23,7 @@ async function register_controller(req,res){
  
      res.status(200).json({
          message:"Account create successfully",
+         
      })
 }
 async function login_controller(req,res){
@@ -47,7 +48,8 @@ const {username,password}=req.body
     const token = jwt.sign({id:isexit._id},process.env.JWT)
     res.cookie("token",token)
     res.status(200).json({
-        message:"login sucessfull"
+        message:"login sucessfull",
+        token: token
     }) 
 }
 
