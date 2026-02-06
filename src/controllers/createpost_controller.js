@@ -37,8 +37,12 @@ async function mypost(req,res){
 
         const captions = check.map((caption,index) => { 
             return `Caption ${index+1} => ${caption.caption}`});
+        const image = check.map((image,index) => { 
+            return `Image ${index+1} => ${image.image}`});
         return res.status(200).json({
-            cation:captions
+            cation:captions,
+            image:image
+
         })
     }
     catch(err){
