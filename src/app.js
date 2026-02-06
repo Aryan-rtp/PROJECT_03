@@ -9,7 +9,7 @@ const postRouter = require("./routes/post.routes");
 
 const app = express();
 app.use(cors({
-  origin: ["http://127.0.0.1:5500", "http://localhost:5500"],
+  origin: ["https://caption-frontend-psi.vercel.app"],
   credentials: true
 }));
 
